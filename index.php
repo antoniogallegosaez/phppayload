@@ -30,17 +30,20 @@ function test() {
 //post function - function: /reindeerservice
 function handler() {
     $request = \Slim\Slim::getInstance()->request();
+    $body = $request->getBody();
+    $input = json_decode($body); 
+    echo json_encode($body);
 
     //$data = getenv('data');
 
-    $payload_data = new stdClass();
-    $payload_data->serviceName = $request->post('$serviceName');
-    $payload_data->payload->teamName = $request->post('$teamName');
-    $payload_data->payload->reindeerName = $request->post('$reindeerName');
-    $payload_data->payload->nameEmaiMap1 = $request->post('$nameEmaiMap1');
-    $payload_data->payload->nameEmaiMap2 = $request->post('$nameEmaiMap2');
+    //$payload_data = new stdClass();
+    //$payload_data->serviceName = $request->post('$serviceName');
+    //$payload_data->payload->teamName = $request->post('$teamName');
+    //$payload_data->payload->reindeerName = $request->post('$reindeerName');
+    //$payload_data->payload->nameEmaiMap1 = $request->post('$nameEmaiMap1');
+    //$payload_data->payload->nameEmaiMap2 = $request->post('$nameEmaiMap2');
 
-    echo json_encode($payload_data);
+    //echo json_encode($payload_data);
 
 }
 
