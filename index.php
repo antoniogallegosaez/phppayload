@@ -46,12 +46,15 @@ function handler() {
 
     echo json_encode($payload_data);
 
+    $reindeers = array("");
+    
     $dir = new DirectoryIterator("/etc/santas-config/..data/");
     foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {
         $filename = $fileinfo->getFilename();
-        echo (file_get_contents ( "/etc/santas-config/..data/" . $filename ));
+        $reindeers[] = file_get_contents ( "/etc/santas-config/..data/" . $filename );
     }
+        var_dump ($reindeers);
 }
     
 }
