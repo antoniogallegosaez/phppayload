@@ -63,6 +63,7 @@ function handler() {
     foreach ($reindeers as $key => $reindeer) {
         var_dump ($key);
         var_dump ($reindeer);
+        $payload_data->payload[$key] = new stdClass();
         $payload_data->payload[$key]->teamName = $data->payload[0]->teamName;
         $payload_data->payload[$key]->reindeerName = $reindeer;
         $payload_data->payload[$key]->nameEmaiMap = $data->payload[0]->nameEmaiMap;
