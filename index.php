@@ -58,7 +58,7 @@ function handler() {
           $reindeers[] = file_get_contents ( "/etc/santas-config/..data/" . $filename );
       }
     }
-    sort ($reindeers);
+    natcasesort ($reindeers);
     var_dump ($reindeers);
    
 }
