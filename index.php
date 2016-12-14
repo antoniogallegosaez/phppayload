@@ -46,6 +46,7 @@ function handler() {
     
     // fake it for now 
     $payload_data->serviceName = 'wunorse-openslae';
+    $payload_data->payload = new stdClass();
     $payload_data->payload->teamName = 'santas-helpers-c-team';
     $payload_data->payload->reindeerName = 'comet';
     $payload_data->payload->nameEmaiMap1 = '"Andrea Tarrochi" : "atarocch@redhat.com"';
