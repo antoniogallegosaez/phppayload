@@ -36,7 +36,8 @@ function handler() {
 
     //$data = getenv('data');
     $payload_data = new stdClass();
-    $payload_data->serviceName = $request->post('serviceName');
+  //  $payload_data->serviceName = $request->post('serviceName');
+    $payload_data->serviceName = 'placeholderserviceName';
     //$payload_data->serviceName = $request->getParsedBodyParam('serviceName');
     //$payload_data->payload->teamName = $request->post('teamName');
     //$payload_data->payload->reindeerName = $request->post('reindeerName');
