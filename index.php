@@ -61,7 +61,7 @@ function handler() {
     foreach ($reindeers as $key => $reindeer) {
         var_dump ($key);
         var_dump ($reindeer);
-        $payload_data->payload = array_pad($payload_data->payload, $key+1);
+        $payload_data->payload = array_pad($payload_data->payload, $key+1, '');
         //$payload_data->payload[] = new stdClass();
         $payload_data->payload[$key]->teamName = $data->payload[0]->teamName;
         $payload_data->payload[$key]->reindeerName = $reindeer;
