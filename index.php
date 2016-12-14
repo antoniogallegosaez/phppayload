@@ -72,7 +72,26 @@ function handler() {
  // var_dump ($payload_data);
   echo json_encode($payload_data);
     //todo send post request to proxy service
-   
+
+    $url = 'http://proxy-api-santas-helpers-c-team.35.156.180.17.xip.io';
+$post_data = json_encode($payload_data);
+
+// use key 'http' even if you send the request to https://...
+$options = array(
+    'http' => array(
+        'header'  => "Content-type: application/json\r\n",
+        'method'  => 'POST',
+        'content' => http_build_query($data)
+    )
+);
+$context  = stream_context_create($options);
+$result = file_get_contents($url, false, $context);
+if ($result === FALSE) { /* Handle error */ }
+
+var_dump($result);
+    
 }
+
+
 
 ?>
