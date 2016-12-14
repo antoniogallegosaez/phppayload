@@ -33,12 +33,12 @@ function handler() {
 
 
     $data = json_decode($request->getBody());
-   // var_dump ($data);
+    var_dump ($data);
    // echo json_encode($data);
 
     $payload_data = new stdClass();
   //  $payload_data->payload = new stdClass();
-array ($payload_data->payload);
+//array ($payload_data->payload);
     //$payload_data->serviceName = $request->post('serviceName');
     $payload_data->serviceName = $data->serviceName;
     //$payload_data->payload->teamName = $data->payload[0]->teamName;
