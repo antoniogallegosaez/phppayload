@@ -59,7 +59,7 @@ function handler() {
     }
     natcasesort ($reindeers);
     
-   
+   //this is supposed to add one object to the payload array for each reindeer
     foreach ($reindeers as $key => $reindeer) {
         var_dump ($key);
         var_dump ($reindeer);
