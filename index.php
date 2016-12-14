@@ -37,11 +37,11 @@ function handler() {
     $payload_data = new stdClass();
     $payload_data->payload = new stdClass();
 
-    $payload_data->serviceName = $data->serviceName;
-    $payload_data->payload->teamName = $data->payload->teamName;
-    $payload_data->payload->reindeerName = $data->payload->reindeerName;
-    $payload_data->payload->nameEmaiMap1 = $data->payload->nameEmaiMap1;
-    $payload_data->payload->nameEmaiMap2 = $data->payload->nameEmaiMap2;
+    $payload_data->serviceName = $data->post('serviceName');
+    //$payload_data->payload->teamName = $data->payload->teamName;
+    //$payload_data->payload->reindeerName = $data->payload->reindeerName;
+    //$payload_data->payload->nameEmaiMap1 = $data->payload->nameEmaiMap1;
+    //$payload_data->payload->nameEmaiMap2 = $data->payload->nameEmaiMap2;
     
 
     echo json_encode($payload_data);
