@@ -37,11 +37,11 @@ function handler() {
    // echo json_encode($data);
 
     $payload_data = new stdClass();
-    //$payload_data->payload = new stdClass();
+    $payload_data->payload = new stdClass();
 
     //$payload_data->serviceName = $request->post('serviceName');
     $payload_data->serviceName = $data->serviceName;
-    $payload_data->payload->teamName = $data->payload->0->teamName;
+    $payload_data->payload->teamName = $data->payload[0]->teamName;
     //$payload_data->payload->reindeerName = $data->payload->reindeerName;
     //$payload_data->payload->nameEmaiMap1 = $data->payload->nameEmaiMap1;
     //$payload_data->payload->nameEmaiMap2 = $data->payload->nameEmaiMap2;
