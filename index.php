@@ -30,14 +30,15 @@ function test() {
 //post function - function: /reindeerservice
 function handler() {
     $request = \Slim\Slim::getInstance()->request();
-    $body = $request->getBody();
-    $input = json_decode($body); 
-    echo json_encode($body);
+   // $body = $request->getBody();
+   // $input = json_decode($body); 
+   // echo json_encode($body);
 
     //$data = getenv('data');
     $payload_data = new stdClass();
-  //  $payload_data->serviceName = $request->post('serviceName');
-    $payload_data->serviceName = 'placeholderserviceName';
+    $payload_data->payload = new stdClass();
+
+    //$payload_data->serviceName = $request->post('serviceName');
     //$payload_data->serviceName = $request->getParsedBodyParam('serviceName');
     //$payload_data->payload->teamName = $request->post('teamName');
     //$payload_data->payload->reindeerName = $request->post('reindeerName');
@@ -46,7 +47,6 @@ function handler() {
     
     // fake it for now 
     $payload_data->serviceName = 'wunorse-openslae';
-    $payload_data->payload = new stdClass();
     $payload_data->payload->teamName = 'santas-helpers-c-team';
     $payload_data->payload->reindeerName = 'comet';
     $payload_data->payload->nameEmaiMap1 = '"Andrea Tarrochi" : "atarocch@redhat.com"';
