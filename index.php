@@ -50,7 +50,6 @@ function handler() {
     foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {
         $filename = $fileinfo->getFilename();
-        var_dump($filename);
         echo (file_get_contents ( "/etc/santas-config/..data/" . $filename ));
     }
 }
