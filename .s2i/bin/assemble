@@ -25,5 +25,7 @@ if [ -f composer.json ]; then
   fi
 fi
 
+touch /opt/app-root/etc/conf.d/api.conf
+
 # Fix source directory permissions
 fix-permissions ./
