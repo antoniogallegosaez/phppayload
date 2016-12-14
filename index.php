@@ -59,6 +59,7 @@ function handler() {
     natcasesort ($reindeers);
     
     $payload_data->payload[count ($reindeers)] = new stdClass();
+    var_dump ($payload_data);
 
     
     foreach ($reindeers as $key => $reindeer) {
