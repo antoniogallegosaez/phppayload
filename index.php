@@ -73,7 +73,7 @@ function handler() {
   echo json_encode($payload_data);
     //todo send post request to proxy service
 
-    $url = 'http://proxy-api-santas-helpers-c-team.35.156.180.17.xip.io';
+    $url = 'http://proxy-api:8080';
 $post_data = json_encode($payload_data);
 
 // use key 'http' even if you send the request to https://...
