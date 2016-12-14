@@ -21,10 +21,10 @@ $app->post('reindeerservice', 'handler');
 $app->run();
 
 //post function - function: /reindeerservice
-function handler($id) {
+function handler() {
     $request = \Slim\Slim::getInstance()->request();
 
-    $data = getenv('data');
+    //$data = getenv('data');
 
     $payload_data = new stdClass();
     $payload_data->serviceName = $request->post('serviceName');
