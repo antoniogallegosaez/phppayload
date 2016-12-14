@@ -24,7 +24,7 @@ $app->run();
 
 function test() {
 
-    echo "test";
+    echo "test2";
 }
 
 //post function - function: /reindeerservice
