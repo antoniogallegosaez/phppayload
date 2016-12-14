@@ -25,7 +25,11 @@ if [ -f composer.json ]; then
   fi
 fi
 
-touch /opt/app-root/etc/conf.d/api.conf
+if [ -d "conf.d" ]; then
+  mv conf.d/* /opt/app-root/etc/conf.d
+  rmdir conf.d
+fi
+
 
 # Fix source directory permissions
 fix-permissions ./
