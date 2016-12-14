@@ -34,7 +34,7 @@ function handler() {
 
     //$body = $request->getBody();
     //$data = json_decode($body);
-    var_dump ($data);
+    //var_dump ($data);
    // echo json_encode($data);
 
     $payload_data = new stdClass();
