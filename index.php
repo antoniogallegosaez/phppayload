@@ -38,18 +38,11 @@ function handler() {
     $payload_data->payload = new stdClass();
 
     $payload_data->serviceName = $data->serviceName;
-    $payload_data->payload->teamName = $data->teamName;
-    $payload_data->payload->reindeerName = $data->reindeerName;
-    $payload_data->payload->nameEmaiMap1 = $data->nameEmaiMap1;
-    $payload_data->payload->nameEmaiMap2 = $data->nameEmaiMap2;
+    $payload_data->payload->teamName = $data->payload->teamName;
+    $payload_data->payload->reindeerName = $data->payload->reindeerName;
+    $payload_data->payload->nameEmaiMap1 = $data->payload->nameEmaiMap1;
+    $payload_data->payload->nameEmaiMap2 = $data->payload->nameEmaiMap2;
     
-    // fake it for now 
- 
- //   $payload_data->serviceName = 'wunorse-openslae';
-   // $payload_data->payload->teamName = 'santas-helpers-c-team';
-   // $payload_data->payload->reindeerName = 'comet';
-   // $payload_data->payload->nameEmaiMap1 = '"Andrea Tarrochi" : "atarocch@redhat.com"';
-   // $payload_data->payload->nameEmaiMap2 = '"Andrea Tarrochi" : "atarocch@redhat.com"';
 
     echo json_encode($payload_data);
 
