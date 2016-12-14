@@ -31,12 +31,12 @@ function test() {
 function handler() {
     $request = \Slim\Slim::getInstance()->request();
     $body = $request->getBody();
-    //$input = json_decode($body); 
-    //echo json_encode($body);
+    $input = json_decode($body); 
+    echo json_encode($body);
 
     //$data = getenv('data');
     $payload_data = new stdClass();
-    $payload_data->serviceName = $request->post('serviceName');
+   // $payload_data->serviceName = $request->post('serviceName');
     //$payload_data->payload->teamName = $request->post('teamName');
     //$payload_data->payload->reindeerName = $request->post('reindeerName');
     //$payload_data->payload->nameEmaiMap1 = $request->post('nameEmaiMap1');
