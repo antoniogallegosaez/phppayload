@@ -43,6 +43,13 @@ function handler() {
     //$payload_data->payload->reindeerName = $request->post('reindeerName');
     //$payload_data->payload->nameEmaiMap1 = $request->post('nameEmaiMap1');
     //$payload_data->payload->nameEmaiMap2 = $request->post('nameEmaiMap2');
+    
+    // fake it for now 
+    $payload_data->serviceName = 'wunorse-openslae';
+    $payload_data->payload->teamName = 'santas-helpers-c-team';
+    $payload_data->payload->reindeerName 'comet';
+    $payload_data->payload->nameEmaiMap1 = '"Andrea Tarrochi" : "atarocch@redhat.com"';
+    $payload_data->payload->nameEmaiMap2 = '"Andrea Tarrochi" : "atarocch@redhat.com"';
 
     echo json_encode($payload_data);
 
