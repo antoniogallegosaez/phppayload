@@ -33,7 +33,7 @@ function handler() {
 
 
     $data = json_decode($request->getBody());
-    var_dump ($data);
+ //   var_dump ($data);
    // echo json_encode($data);
 
     $payload_data = new stdClass();
@@ -46,7 +46,7 @@ function handler() {
     
    // var_dump ($data->payload[0]);
   //  echo json_encode($payload_data);
-    var_dump ($payload_data);
+    //var_dump ($payload_data);
 
     $reindeers = array($data->payload[0]->reindeerName);
     
@@ -61,16 +61,16 @@ function handler() {
     
    //this is supposed to add one object to the payload array for each reindeer
     foreach ($reindeers as $key => $reindeer) {
-        var_dump ($key);
-        var_dump ($reindeer);
+        //var_dump ($key);
+        //var_dump ($reindeer);
         $payload_data->payload[$key] = new stdClass();
         $payload_data->payload[$key]->teamName = $data->payload[0]->teamName;
         $payload_data->payload[$key]->reindeerName = $reindeer;
         $payload_data->payload[$key]->nameEmaiMap = $data->payload[0]->nameEmaiMap;
-        var_dump ($payload_data);
+       // var_dump ($payload_data);
     }
  // var_dump ($payload_data);
-  //echo json_encode($payload_data);
+  echo json_encode($payload_data);
     //todo send post request to proxy service
    
 }
