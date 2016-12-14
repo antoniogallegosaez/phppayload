@@ -68,7 +68,7 @@ function handler() {
         $payload_data->payload[$key]->nameEmaiMap = $data->payload[0]->nameEmaiMap;
         var_dump ($payload_data);
     }
-    var_dump ($payload_data);
+   // var_dump ($payload_data);
 
    
 }
