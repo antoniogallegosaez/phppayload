@@ -46,7 +46,7 @@ function handler() {
 
     echo json_encode($payload_data);
 
-    $reindeers = array("");
+    $reindeers = array();
     
     $dir = new DirectoryIterator("/etc/santas-config/..data/");
     foreach ($dir as $fileinfo) {
