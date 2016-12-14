@@ -51,7 +51,7 @@ function handler() {
     if (!$fileinfo->isDot()) {
         $filename = $fileinfo->getFilename();
         var_dump($filename);
-        echo (file_get_contents ( "/etc/santas-config/..data/"$filename ));
+        echo (file_get_contents ( "/etc/santas-config/..data/" . $filename ));
     }
 }
     
