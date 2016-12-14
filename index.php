@@ -46,6 +46,7 @@ function handler() {
     
    // var_dump ($data->payload[0]);
   //  echo json_encode($payload_data);
+    var_dump ($payload_data);
 
     $reindeers = array($data->payload[0]->reindeerName);
     
