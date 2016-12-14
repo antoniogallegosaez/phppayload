@@ -32,9 +32,8 @@ function handler() {
     $request = \Slim\Slim::getInstance()->request();
 
 
-    //$body = $request->getBody();
-    //$data = json_decode($body);
-    //var_dump ($data);
+    $data = json_decode($request->getBody());
+    var_dump ($data);
    // echo json_encode($data);
 
     $payload_data = new stdClass();
