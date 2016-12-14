@@ -45,8 +45,9 @@ function handler() {
     //$payload_data->payload->nameEmaiMap1 = $request->post('nameEmaiMap1');
     //$payload_data->payload->nameEmaiMap2 = $request->post('nameEmaiMap2');
     
-    var_dump $request->params(serviceName),
+    var_dump $request->params('serviceName');
     // fake it for now 
+    
     $payload_data->serviceName = 'wunorse-openslae';
     $payload_data->payload->teamName = 'santas-helpers-c-team';
     $payload_data->payload->reindeerName = 'comet';
