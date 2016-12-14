@@ -62,10 +62,10 @@ function handler() {
     foreach ($reindeers as $key => $reindeer) {
         var_dump ($key);
         var_dump ($reindeer);
-        $payload_data->payload[] = new stdClass();
-        $payload_data->payload[]->teamName = $data->payload[0]->teamName;
-        $payload_data->payload[]->reindeerName = $reindeer;
-        $payload_data->payload[]->nameEmaiMap = $data->payload[0]->nameEmaiMap;
+        $payload_data->payload = new stdClass();
+        $payload_data->payload->teamName = $data->payload[0]->teamName;
+        $payload_data->payload->reindeerName = $reindeer;
+        $payload_data->payload->nameEmaiMap = $data->payload[0]->nameEmaiMap;
         var_dump ($payload_data);
     }
     
