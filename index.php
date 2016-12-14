@@ -59,7 +59,12 @@ function handler() {
       }
     }
     natcasesort ($reindeers);
-    var_dump ($reindeers);
+    
+    foreach ($reindeers as $reindeer) {
+        var_dump ($reindeer);
+    }
+    
+
    
 }
 
