@@ -33,7 +33,7 @@ function handler() {
 
 
     $data = json_decode($request->getBody());
-    var_dump ($data);
+   // var_dump ($data);
    // echo json_encode($data);
 
     $payload_data = new stdClass();
@@ -41,13 +41,12 @@ function handler() {
 
     //$payload_data->serviceName = $request->post('serviceName');
     $payload_data->serviceName = $data->serviceName;
-    $payload_data->payload->teamName = $data->payload[0]->teamName;
-    $payload_data->payload->reindeerName = $data->payload[0]->reindeerName;
-    $payload_data->payload->nameEmaiMap = $data->payload[0]->nameEmaiMap;
-    //$payload_data->payload->nameEmaiMap2 = $data->payload->nameEmaiMap2;
+    //$payload_data->payload->teamName = $data->payload[0]->teamName;
+    //$payload_data->payload->reindeerName = $data->payload[0]->reindeerName;
+    //$payload_data->payload->nameEmaiMap = $data->payload[0]->nameEmaiMap;
     
-    var_dump ($data->payload[0]);
-    echo json_encode($payload_data);
+   // var_dump ($data->payload[0]);
+  //  echo json_encode($payload_data);
 
     $reindeers = array($data->payload[0]->reindeerName);
     
@@ -60,8 +59,14 @@ function handler() {
     }
     natcasesort ($reindeers);
     
-    foreach ($reindeers as $reindeer) {
+    foreach ($reindeers as $key => $reindeer) {
+        var_dump ($key);
         var_dump ($reindeer);
+        $payload_data->payload[$key] = new stdClass();
+        $payload_data->payload[$key]->teamName = $data->payload[0]->teamName;
+        $payload_data->payload[$key]->reindeerName = $reindeer;
+        $payload_data->payload->nameEmaiMap = $data->payload[0]->nameEmaiMap;
+        var_dump ($payload_data);
     }
     
 
