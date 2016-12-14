@@ -81,7 +81,7 @@ $options = array(
     'http' => array(
         'header'  => "Content-type: application/json\r\n",
         'method'  => 'POST',
-        'content' => http_build_query($data)
+        'content' => http_build_query($post_data)
     )
 );
 $context  = stream_context_create($options);
