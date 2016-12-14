@@ -50,13 +50,13 @@ function handler() {
     
     $dir = new DirectoryIterator("/etc/santas-config/..data/");
     foreach ($dir as $fileinfo) {
-    if (!$fileinfo->isDot()) {
-        $filename = $fileinfo->getFilename();
-        $reindeers[] = file_get_contents ( "/etc/santas-config/..data/" . $filename );
+      if (!$fileinfo->isDot()) {
+          $filename = $fileinfo->getFilename();
+          $reindeers[] = file_get_contents ( "/etc/santas-config/..data/" . $filename );
+      }
     }
-        var_dump ($reindeers);
-}
-    
+    var_dump ($reindeers);
+   
 }
 
 ?>
