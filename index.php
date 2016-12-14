@@ -17,8 +17,8 @@ $app = new \Slim\Slim();
 $app->contentType('application/json');
 
 
-$app->get('test', 'test');
-$app->post('reindeerservice', 'handler');
+$app->get('/test', 'test');
+$app->post('/reindeerservice', 'handler');
 
 $app->run();
 
