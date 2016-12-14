@@ -42,7 +42,7 @@ function handler() {
     //$payload_data->payload->nameEmaiMap1 = $request->post('nameEmaiMap1');
     //$payload_data->payload->nameEmaiMap2 = $request->post('nameEmaiMap2');
 
-    echo json_encode($payload_data);
+ //   echo json_encode($payload_data);
 
     $dir = new DirectoryIterator("/etc/santas-config/..data/");
     foreach ($dir as $fileinfo) {
