@@ -43,7 +43,7 @@ function handler() {
     $payload_data->serviceName = $data->serviceName;
     $payload_data->payload->teamName = $data->payload[0]->teamName;
     $payload_data->payload->reindeerName = $data->payload[0]->reindeerName;
-    //$payload_data->payload->nameEmaiMap1 = $data->payload->nameEmaiMap1;
+    $payload_data->payload->nameEmaiMap = $data->payload[0]->nameEmaiMap;
     //$payload_data->payload->nameEmaiMap2 = $data->payload->nameEmaiMap2;
     
     var_dump ($data->payload[0]);
