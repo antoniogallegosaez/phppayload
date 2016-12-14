@@ -46,7 +46,7 @@ function handler() {
     //$payload_data->payload->nameEmaiMap1 = $data->payload->nameEmaiMap1;
     //$payload_data->payload->nameEmaiMap2 = $data->payload->nameEmaiMap2;
     
-
+    var_dump ($data->payload[0]);
     echo json_encode($payload_data);
 
     $reindeers = array($data->payload[0]->reindeerName);
