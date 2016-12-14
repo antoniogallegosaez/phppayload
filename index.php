@@ -42,14 +42,14 @@ function handler() {
     //$payload_data->serviceName = $request->post('serviceName');
     $payload_data->serviceName = $data->serviceName;
     $payload_data->payload->teamName = $data->payload[0]->teamName;
-    //$payload_data->payload->reindeerName = $data->payload->reindeerName;
+    $payload_data->payload->reindeerName = $data->payload[0]->reindeerName;
     //$payload_data->payload->nameEmaiMap1 = $data->payload->nameEmaiMap1;
     //$payload_data->payload->nameEmaiMap2 = $data->payload->nameEmaiMap2;
     
 
     echo json_encode($payload_data);
 
-    $reindeers = array();
+    $reindeers = array($data->payload[0]->reindeerName);
     
     $dir = new DirectoryIterator("/etc/santas-config/..data/");
     foreach ($dir as $fileinfo) {
