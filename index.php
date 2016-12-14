@@ -37,8 +37,7 @@ function handler() {
    // echo json_encode($data);
 
     $payload_data = new stdClass();
-  //  $payload_data->payload = new stdClass();
-//array ($payload_data->payload);
+    $payload_data->payload[] = new stdClass();
     //$payload_data->serviceName = $request->post('serviceName');
     $payload_data->serviceName = $data->serviceName;
     //$payload_data->payload->teamName = $data->payload[0]->teamName;
@@ -63,9 +62,9 @@ function handler() {
         var_dump ($key);
         var_dump ($reindeer);
         //$payload_data->payload = new stdClass();
-        $payload_data->payload->teamName = $data->payload[0]->teamName;
-        $payload_data->payload->reindeerName = $reindeer;
-        $payload_data->payload->nameEmaiMap = $data->payload[0]->nameEmaiMap;
+        $payload_data->payload[$key]->teamName = $data->payload[0]->teamName;
+        $payload_data->payload[$key]->reindeerName = $reindeer;
+        $payload_data->payload[$key]->nameEmaiMap = $data->payload[0]->nameEmaiMap;
         var_dump ($payload_data);
     }
     var_dump ($payload_data);
