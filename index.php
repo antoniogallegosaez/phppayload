@@ -32,17 +32,16 @@ function handler() {
     $request = \Slim\Slim::getInstance()->request();
     $body = $request->getBody();
     $data = json_decode($body); 
-    echo json_encode($data);
+   // echo json_encode($data);
 
     $payload_data = new stdClass();
     $payload_data->payload = new stdClass();
 
     $payload_data->serviceName = $data->serviceName;
-    //$payload_data->serviceName = $request->getParsedBodyParam('serviceName');
-    //$payload_data->payload->teamName = $request->post('teamName');
-    //$payload_data->payload->reindeerName = $request->post('reindeerName');
-    //$payload_data->payload->nameEmaiMap1 = $request->post('nameEmaiMap1');
-    //$payload_data->payload->nameEmaiMap2 = $request->post('nameEmaiMap2');
+    $payload_data->payload->teamName = $data->teamName;
+    $payload_data->payload->reindeerName = $data->reindeerName;
+    $payload_data->payload->nameEmaiMap1 = $data->nameEmaiMap1;
+    $payload_data->payload->nameEmaiMap2 = $data->nameEmaiMap2;
     
     // fake it for now 
  
