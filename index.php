@@ -36,13 +36,13 @@ function handler() {
 
     //$data = getenv('data');
     $payload_data = new stdClass();
-   // $payload_data->serviceName = $request->post('serviceName');
+    $payload_data->serviceName = $request->getParsedBodyParam('serviceName');
     //$payload_data->payload->teamName = $request->post('teamName');
     //$payload_data->payload->reindeerName = $request->post('reindeerName');
     //$payload_data->payload->nameEmaiMap1 = $request->post('nameEmaiMap1');
     //$payload_data->payload->nameEmaiMap2 = $request->post('nameEmaiMap2');
 
- //   echo json_encode($payload_data);
+    echo json_encode($payload_data);
 
     $dir = new DirectoryIterator("/etc/santas-config/..data/");
     foreach ($dir as $fileinfo) {
