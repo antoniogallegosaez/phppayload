@@ -31,7 +31,8 @@ function test() {
 function handler() {
     $request = \Slim\Slim::getInstance()->request();
     $body = $request->getBody();
-    $data = json_decode($body); 
+    $data = json_decode($body);
+    var_dump ($data);
    // echo json_encode($data);
 
     $payload_data = new stdClass();
@@ -46,14 +47,17 @@ function handler() {
 
     echo json_encode($payload_data);
 
+    $reindeers = array();
+    
     $dir = new DirectoryIterator("/etc/santas-config/..data/");
     foreach ($dir as $fileinfo) {
-    if (!$fileinfo->isDot()) {
-        $filename = $fileinfo->getFilename();
-        echo (file_get_contents ( "/etc/santas-config/..data/" . $filename ));
+      if (!$fileinfo->isDot()) {
+          $filename = $fileinfo->getFilename();
+          $reindeers[] = file_get_contents ( "/etc/santas-config/..data/" . $filename );
+      }
     }
-}
-    
+    var_dump ($reindeers);
+   
 }
 
 ?>
