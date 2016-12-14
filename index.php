@@ -38,7 +38,7 @@ function handler() {
    // echo json_encode($data);
 
     $payload_data = new stdClass();
-    $payload_data->payload = new stdClass();
+    //$payload_data->payload = new stdClass();
 
     $payload_data->serviceName = $request->post('serviceName');
     //$payload_data->payload->teamName = $data->payload->teamName;
