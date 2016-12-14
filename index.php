@@ -45,7 +45,7 @@ function handler() {
 
     //echo json_encode($payload_data);
 
-    $dir = new DirectoryIterator(dirname(/etc/santas-config));
+    $dir = new DirectoryIterator("/etc/santas-config");
     foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {
         var_dump($fileinfo->getFilename());
